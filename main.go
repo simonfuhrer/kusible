@@ -20,8 +20,6 @@ import (
 	"github.com/bedag/kusible/cmd"
 )
 
-var version string
-
 func main() {
 	cmd.Execute()
 	os.Exit(0)

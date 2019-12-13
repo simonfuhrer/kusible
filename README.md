@@ -1,3 +1,24 @@
+[![Actions Status][1]][2]
+[![GoDoc][3]][4]
+[![Coverage Status][5]][6]
+![Downloads][7]
+![GitHub contributors][8]
+[![Powered By: GoReleaser][9]][10]
+[![Software License][11]][12]
+
+[1]: https://github.com/simonfuhrer/kusible/workflows/build/badge.svg
+[2]: https://github.com/simonfuhrer/kusible/actions
+[3]: https://godoc.org/github.com/simonfuhrer/kusible?status.svg
+[4]: https://godoc.org/github.com/simonfuhrer/kusible
+[5]: https://coveralls.io/repos/github/simonfuhrer/kusible/badge.svg?branch=sfu_dev
+[6]: https://coveralls.io/github/simonfuhrer/kusible?branch=sfu_dev
+[7]: https://img.shields.io/github/downloads/simonfuhrer/kusible/total
+[8]: https://img.shields.io/github/contributors/simonfuhrer/kusible
+[9]: https://img.shields.io/badge/powered%20by-goreleaser-green.svg
+[10]: https://github.com/goreleaser
+[11]: https://img.shields.io/badge/license-Apache-brightgreen.svg
+[12]: /LICENSE.md
+
 ![Logo of kusible](assets/images/kusible-0.0.4-small.png)
 
 # kusible documentation
