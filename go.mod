@@ -14,7 +14,7 @@ require (
 	github.com/go-test/deep v1.0.4
 	github.com/imdario/mergo v0.3.8
 	github.com/kjk/lzmadec v0.0.0-20190802150927-78d187673998
-	github.com/mattn/go-isatty v0.0.8 // indirect
+	github.com/mattn/go-isatty v0.0.11 // indirect
 	github.com/mitchellh/mapstructure v1.1.2
 	github.com/pborman/ansi v0.0.0-20160920233902-86f499584b0a
 	github.com/pkg/errors v0.8.1 // indirect
@@ -25,6 +25,7 @@ require (
 	github.com/starkandwayne/goutils v0.0.0-20190115202530-896b8a6904be // indirect
 	github.com/ziutek/utils v0.0.0-20190626152656-eb2a3b364d6c // indirect
 	golang.org/x/oauth2 v0.0.0-20190604053449-0f29369cfe45 // indirect
+	golang.org/x/sys v0.0.0-20191210023423-ac6580df4449 // indirect
 	golang.org/x/time v0.0.0-20191024005414-555d28b269f0 // indirect
 	gopkg.in/yaml.v2 v2.2.7
 	gotest.tools v2.2.0+incompatible

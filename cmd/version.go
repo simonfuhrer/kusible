@@ -20,10 +20,11 @@ import (
 	"fmt"
 
 	"github.com/spf13/cobra"
+
+	"github.com/bedag/kusible/pkg/version"
 )
 
 const appName = "kusible"
-const version = "v0.0.1"
 
 func init() {
 	rootCmd.AddCommand(versionCmd)
@@ -33,6 +34,7 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: fmt.Sprint("Print the version number of ", appName),
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Printf("%s %s\n", appName, version)
+		v := version.Get()
+		fmt.Println(appName, fmt.Sprintf("%#v", v))
 	},
 }

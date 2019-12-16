@@ -1,0 +1,47 @@
+before:
+  hooks:
+    # you may remove this if you don't use vgo
+    - go mod tidy
+builds:
+- env:
+  - CGO_ENABLED=0
+  - GO111MODULE=on
+  ldflags:
+  - -s -w
+  - -X github.com/bedag/kusible/pkg/version.version={{.Version}}
+  - -X github.com/bedag/kusible/pkg/version.gitTreeState={{ .Env.GIT_TREE_STATE }}
+  - -X github.com/bedag/kusible/pkg/version.gitCommit={{.FullCommit}}
+  flags: |
+    -tags netgo -gcflags="-trimpath=$GOPATH" -asmflags="-trimpath=$GOPATH"
+  goos:
+    - darwin
+    - freebsd
+    - linux
+    - openbsd
+    - windows
+  goarch:
+    - amd64
+
+archives:
+- name_template: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}'
+  replacements:
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+    amd64: x86_64
+  format_overrides:
+  - goos: windows
+    format: zip
+
+checksum:
+  name_template: '{{ .ProjectName }}_checksums.txt'
+snapshot:
+  name_template: "{{ .Tag }}-next"
+changelog:
+  sort: asc
+  filters:
+    exclude:
+    - '^docs:'
+    - '^test:'
+    - Merge pull request
+    - Merge branch
